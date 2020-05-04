@@ -12,11 +12,6 @@
       <v-card-subtitle id="cards_subtitle">Está sección sirve para validar el progreso de los integrantes de tu unidad en su proceso con el plan de adelantos.</v-card-subtitle>
     </v-card> 
     <br />
-
-    <v-card id="cards_lobby" :elevation="5" v-on:click="envio(2)">
-      <v-card-title id="cards_title">ACTAS DE REUNIÓN</v-card-title>
-      <v-card-subtitle id="cards_subtitle">Está sección sirve para crear y visualizar actas de unidad.</v-card-subtitle>
-    </v-card>
   </div>
 </template>
 <script>
