@@ -194,7 +194,7 @@
             <!--INICIO BOTON DE CRUD REQUISITOS  -->
             <hr />
             <!--ACTUALIZAR REQUISITO  -->
-
+            <div v-if="rol != 'Integrante'">
             <v-dialog v-model="dialog4" width="500">
               <template v-slot:activator="{ on }">
                 <v-btn id="boton2" v-on="on">
@@ -274,8 +274,10 @@
                 </v-card-actions>
               </v-card>
             </v-dialog>
+            
             <!-- FIN BOTON CRUD REQUISITOS -->
             <hr />
+            </div>
             <!--BOTONES INTEGRANTE-->
             <v-btn
               v-if="requisito.estado == 'No realizado' && rol == 'Integrante'"
@@ -489,7 +491,7 @@ export default {
           )
           .then((response) => {
             this.dialog1 = false;
-            this.volver_a_cargar_especialidades()
+            this.volver_a_cargar_especialidades();
           })
           .catch((e) => {
             alert("ERROR: " + e);
@@ -517,7 +519,7 @@ export default {
           )
           .then((response) => {
             this.dialog2 = false;
-            this.volver_a_cargar_especialidades()
+            this.volver_a_cargar_especialidades();
           })
           .catch((e) => {
             alert("ERROR: " + e);
@@ -532,7 +534,7 @@ export default {
         .delete("cuadro/eliminar_adicional/" + this.id_integrante + "/" + id)
         .then((response) => {
           this.dialog3 = false;
-         this.volver_a_cargar_especialidades()
+          this.volver_a_cargar_especialidades();
         })
         .catch((e) => {
           alert("ERROR: " + e);
@@ -554,7 +556,7 @@ export default {
           )
           .then((response) => {
             this.dialog4 = false;
-           this.volver_a_cargar_especialidades()
+            this.volver_a_cargar_especialidades();
           })
           .catch((e) => {
             alert("ERROR: " + e);
@@ -569,7 +571,7 @@ export default {
         .delete("requisito/eliminar_adicional/" + this.id_integrante + "/" + id)
         .then((response) => {
           this.dialog5 = false;
-          this.volver_a_cargar_especialidades()
+          this.volver_a_cargar_especialidades();
         })
         .catch((e) => {
           alert("ERROR: " + e);

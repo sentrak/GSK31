@@ -12,9 +12,9 @@
   
   "dependencies": {
     "@babel/cli": "^7.6.0",
-  "@babel/core": "^7.6.0",
-  "@babel/node": "^7.6.1",
-  "@babel/preset-env": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
     "-": "0.0.1",
     "@mdi/font": "^3.6.95",
     "axios": "^0.19.2",
